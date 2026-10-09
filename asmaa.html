@@ -1,0 +1,1148 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Malem Asmaa</title>
+<meta name="description" content="Portfolio de Malem Asmaa, informaticienne diplômée d'un Master 2 en Génie informatique à Tiaret.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&family=Jost:wght@300..600&display=swap">
+<style>
+/* Concept : éditorial de mode appliqué à un portfolio d'ingénierie. Grands titres Bodoni, filets champagne fins,
+   une seule mise en scène animée (le hero), le reste reste calme. */
+:root{
+  --serif:"Bodoni Moda","Didot","Playfair Display",Georgia,serif;
+  --sans:"Jost","Helvetica Neue",Arial,sans-serif;
+  --bg:#f8f5ee;
+  --bg-2:#efe9da;
+  --card:#fcfaf5;
+  --ink:#16130f;
+  --on-ink:#f8f5ee;
+  --muted:#5f5a50;
+  --line:#e0d8c5;
+  --line-strong:#cbbfa4;
+  --err:#a53a2a;
+  --gold:#b8955a;
+  --gold-ink:#7a5c28;
+  --glow:rgba(184,149,90,.16);
+  --bar-a:#16130f; --bar-a-fg:#f8f5ee;
+  --bar-b:#cdb487; --bar-b-fg:#16130f;
+  --seal-bg:#fcfaf5; --seal-fg:#16130f;
+  --shadow:0 18px 50px -24px rgba(40,30,10,.35);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#100f0c; --bg-2:#181611; --card:#15130f; --ink:#f3eee2; --on-ink:#100f0c; --muted:#a8a191;
+    --line:#2b2820; --line-strong:#413d31; --gold:#cfae72; --gold-ink:#d9bb80; --glow:rgba(207,174,114,.12);
+    --bar-a:#f3eee2; --bar-a-fg:#100f0c; --bar-b:#7a6038; --bar-b-fg:#f3eee2;
+    --seal-bg:#15130f; --seal-fg:#f3eee2; --shadow:0 18px 50px -24px rgba(0,0,0,.8); --err:#e58a79;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#100f0c; --bg-2:#181611; --card:#15130f; --ink:#f3eee2; --on-ink:#100f0c; --muted:#a8a191;
+  --line:#2b2820; --line-strong:#413d31; --gold:#cfae72; --gold-ink:#d9bb80; --glow:rgba(207,174,114,.12);
+  --bar-a:#f3eee2; --bar-a-fg:#100f0c; --bar-b:#7a6038; --bar-b-fg:#f3eee2;
+  --seal-bg:#15130f; --seal-fg:#f3eee2; --shadow:0 18px 50px -24px rgba(0,0,0,.8); --err:#e58a79;
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4,p,ul,dl,dd,figure{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--gold-ink);outline-offset:3px;border-radius:2px}
+.ic{width:1.25em;height:1.25em;stroke:currentColor;fill:none;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.wrap{width:min(1180px,100%);margin-inline:auto;padding-inline:clamp(16px,5vw,40px)}
+section{scroll-margin-top:72px}
+.sec{padding-block:clamp(72px,11vw,140px)}
+.eyebrow{font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-ink);font-weight:500;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold)}
+h2.title{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4.6vw,3.5rem);line-height:1.1;letter-spacing:-.01em;margin-top:18px;text-wrap:balance;max-width:20ch}
+h2.title em{font-style:italic;color:var(--gold-ink)}
+.lead{color:var(--muted);max-width:60ch}
+mark{background:linear-gradient(transparent 62%,color-mix(in srgb,var(--gold) 38%,transparent) 62%);color:inherit;padding:0 .08em}
+
+/* boutons */
+.btn{--h:52px;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:var(--h);padding:0 28px;border:1px solid var(--ink);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;overflow:hidden;isolation:isolate;transition:color .45s var(--ease),border-color .45s var(--ease)}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;transform:translateY(101%);transition:transform .5s var(--ease)}
+.btn .ic{transition:transform .45s var(--ease)}
+.btn:hover .ic{transform:translateX(4px)}
+.btn-solid{background:var(--ink);color:var(--on-ink)}
+.btn-solid::before{background:var(--gold-ink)}
+.btn-solid:hover{border-color:var(--gold-ink);color:var(--bg)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-line::before{background:var(--ink)}
+.btn-line:hover{color:var(--on-ink)}
+.btn:hover::before{transform:translateY(0)}
+.link-more{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;font-weight:500;padding-bottom:6px;background:linear-gradient(var(--gold),var(--gold)) 0 100%/100% 1px no-repeat;transition:background-size .5s var(--ease),color .3s}
+.link-more:hover{background-size:0 1px;color:var(--gold-ink)}
+.link-more .ic{transition:transform .4s var(--ease)}
+.link-more:hover .ic{transform:translateX(5px)}
+
+/* navigation */
+.nav{position:fixed;inset:0 0 auto 0;z-index:50;padding-top:env(safe-area-inset-top,0px);transition:background .4s,box-shadow .4s,backdrop-filter .4s}
+.nav.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
+.logo{display:flex;align-items:baseline;gap:10px;font-family:var(--serif)}
+.logo b{font-size:1.7rem;font-weight:500;letter-spacing:.02em;line-height:1}
+.logo b i{color:var(--gold-ink);font-weight:400}
+.logo span{font-family:var(--sans);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.links{display:flex;gap:clamp(14px,2vw,30px)}
+.links a{position:relative;display:block;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;padding:8px 0;font-weight:500;transition:color .3s}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:var(--gold-ink);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.links a:hover,.links a[aria-current="true"]{color:var(--gold-ink)}
+.links a:hover::after,.links a[aria-current="true"]::after{transform:scaleX(1)}
+.nav-r{display:flex;align-items:center;gap:14px}
+.lang{display:flex;border:1px solid var(--line-strong);border-radius:99px;padding:2px}
+.lang button{font-size:.7rem;letter-spacing:.14em;font-weight:500;padding:5px 11px;border-radius:99px;color:var(--muted);transition:background .3s,color .3s}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--on-ink)}
+.burger{display:none;width:42px;height:42px;position:relative}
+.burger i{position:absolute;left:10px;right:10px;height:1px;background:var(--ink);transition:transform .45s var(--ease),top .45s var(--ease),opacity .3s}
+.burger i:nth-child(1){top:16px}.burger i:nth-child(2){top:25px}
+.burger[aria-expanded="true"] i:nth-child(1){top:20px;transform:rotate(45deg)}
+.burger[aria-expanded="true"] i:nth-child(2){top:20px;transform:rotate(-45deg)}
+@media (max-width:1020px){
+  .burger{display:block}
+  .links{position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:6px clamp(16px,5vw,40px) 18px;visibility:hidden;opacity:0;transform:translateY(-12px);transition:opacity .4s var(--ease),transform .4s var(--ease),visibility 0s .4s}
+  .links.open{visibility:visible;opacity:1;transform:none;transition-delay:0s}
+  .links a{padding:15px 0;border-bottom:1px solid var(--line);font-size:.9rem;opacity:0;transform:translateY(-6px);transition:opacity .4s var(--ease),transform .4s var(--ease),color .3s}
+  .links.open a{opacity:1;transform:none;transition-delay:calc(var(--i)*40ms + 60ms)}
+  .links a::after{display:none}
+}
+@media (max-width:520px){.logo span{display:none}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding-top:clamp(120px,16vw,170px);padding-bottom:clamp(64px,8vw,110px);background:radial-gradient(70% 60% at 82% 35%,var(--glow),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(32px,6vw,90px);align-items:center;position:relative;z-index:1}
+.role{font-size:.78rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-ink);font-weight:500}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(3.1rem,9.2vw,7.4rem);line-height:.98;letter-spacing:-.025em;margin-top:22px}
+h1 span{display:block}
+h1 em{font-style:italic;color:var(--gold-ink);padding-left:.55em}
+.tagline{margin-top:30px;max-width:34ch;font-size:clamp(1.05rem,1.8vw,1.28rem);color:var(--muted);line-height:1.6}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+.scroll-hint{display:flex;align-items:center;gap:14px;margin-top:clamp(40px,6vw,72px);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+.scroll-hint i{position:relative;width:1px;height:46px;background:var(--line-strong);overflow:hidden}
+.scroll-hint i::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--gold-ink);animation:drip 2.4s var(--ease) infinite}
+@keyframes drip{to{top:110%}}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}}
+@keyframes fadein{from{opacity:0}}
+@keyframes unveil{from{opacity:0;clip-path:inset(0 0 100% 0);transform:translateY(20px)}}
+.hero [data-in]{animation:rise .9s var(--ease) both;animation-delay:calc(var(--n)*110ms + 120ms)}
+.hero h1 span{animation:unveil 1.1s var(--ease) both}
+.hero h1 span:nth-child(1){animation-delay:.2s}
+.hero h1 span:nth-child(2){animation-delay:.38s}
+.portrait{position:relative;justify-self:center;width:min(100%,380px);animation:fadein 1.2s .3s both}
+.float{animation:bob 9s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.arch{position:relative;aspect-ratio:4/5;border-radius:999px 999px 6px 6px;border:1px solid var(--gold);background:linear-gradient(165deg,var(--bg-2),var(--card));display:grid;place-items:center;overflow:hidden}
+.arch::after{content:"";position:absolute;inset:12px;border:1px solid var(--line-strong);border-radius:999px 999px 2px 2px;pointer-events:none}
+.mono{font-family:var(--serif);font-size:clamp(6rem,15vw,9.5rem);line-height:1;letter-spacing:-.04em;font-weight:400}
+.mono i{color:var(--gold-ink);font-weight:400;margin-left:-.06em}
+.arch small{position:absolute;bottom:34px;left:0;right:0;text-align:center;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+.portrait .seal-slot{position:absolute;left:-34px;bottom:48px;width:112px;height:112px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.12))}
+.seal{display:block;width:100%;height:100%}
+.seal-slot.spin .seal{animation:spin 40s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.orbits{position:absolute;inset:0;pointer-events:none;z-index:0}
+.orbits svg{position:absolute;fill:none;stroke:var(--gold);stroke-width:1;opacity:.5}
+.orbits .o1{right:-140px;top:60px;width:560px;animation:spin 120s linear infinite}
+.orbits .o2{left:-120px;bottom:-60px;width:360px;animation:spin 90s linear infinite reverse;opacity:.35}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .portrait{order:-1;width:min(70%,300px);justify-self:start;margin-bottom:6px}
+  .portrait .seal-slot{left:auto;right:-30px;width:92px;height:92px}
+}
+
+/* transitions de section */
+.rule{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);transform-origin:center}
+
+/* à propos */
+.about{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);gap:clamp(36px,7vw,100px);margin-top:clamp(40px,6vw,64px)}
+.about-text{display:grid;gap:22px;font-size:1.08rem}
+.facts{border:1px solid var(--line);background:var(--card);padding:clamp(22px,3vw,36px);display:grid;gap:0;align-self:start}
+.fact{display:grid;gap:2px;padding:18px 0;border-bottom:1px solid var(--line)}
+.fact:first-child{padding-top:0}.fact:last-child{border-bottom:0;padding-bottom:0}
+.fact dt{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-ink);font-weight:500}
+.fact dd{font-family:var(--serif);font-size:1.28rem;line-height:1.3}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+
+/* compétences */
+.skills{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px;margin-top:clamp(40px,6vw,64px)}
+.skill{grid-column:span 2;border:1px solid var(--line);background:var(--card);padding:clamp(24px,3vw,36px);transition:border-color .5s var(--ease),transform .5s var(--ease),box-shadow .5s var(--ease)}
+.skill.wide{grid-column:span 6}
+.skill.half{grid-column:span 3}
+.skill:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:var(--shadow)}
+.skill .ic{width:30px;height:30px;color:var(--gold-ink)}
+.skill h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;margin:18px 0 16px;line-height:1.2}
+.skill ul{display:grid;gap:10px}
+.skill.wide ul{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px 40px}
+.skill li{position:relative;padding-left:22px;color:var(--muted);line-height:1.5}
+.skill li::before{content:"";position:absolute;left:0;top:.62em;width:10px;height:1px;background:var(--gold)}
+@media (max-width:900px){.skill,.skill.half{grid-column:span 6}}
+
+/* projets */
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,36px);margin-top:clamp(40px,6vw,64px)}
+.proj{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);background:var(--card);transition:border-color .5s var(--ease),box-shadow .5s var(--ease)}
+.proj:hover{border-color:var(--gold);box-shadow:var(--shadow)}
+.proj.feat{grid-column:1/-1;flex-direction:row}
+.thumb{position:relative;overflow:hidden;background:var(--bg-2);aspect-ratio:16/10;cursor:pointer;border-bottom:1px solid var(--line)}
+.feat .thumb{flex:1.25 1 0;min-width:0;border-bottom:0;border-right:1px solid var(--line);aspect-ratio:auto;min-height:340px}
+.thumb svg{display:block;width:100%;height:100%;transition:transform 1.1s var(--ease)}
+.proj:hover .thumb svg{transform:scale(1.045)}
+.proj-body{display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:clamp(24px,3vw,40px);flex:1;min-width:0}
+.feat .proj-body{flex:1 1 0;justify-content:center}
+.kicker{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-ink);font-weight:500}
+.proj h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,3.4vw,2.8rem);line-height:1.08}
+.proj .sub{font-family:var(--serif);font-style:italic;font-size:1.15rem;line-height:1.35;color:var(--muted)}
+.proj p.d{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips li{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line-strong);padding:5px 12px;border-radius:99px;color:var(--ink);transition:border-color .3s,color .3s,background .3s}
+.proj:hover .chips li{border-color:var(--gold)}
+.proj .link-more{margin-top:auto}
+.feat .seal-slot{position:absolute;top:22px;left:22px;width:96px;height:96px;z-index:2}
+@media (max-width:900px){
+  .projects{grid-template-columns:1fr}
+  .proj.feat{flex-direction:column}
+  .feat .thumb{border-right:0;border-bottom:1px solid var(--line);min-height:0;aspect-ratio:16/10;flex:none}
+  .feat .seal-slot{width:76px;height:76px;top:14px;left:14px}
+}
+
+/* fenêtre projet */
+.modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:clamp(10px,3vw,32px);visibility:hidden;opacity:0;transition:opacity .4s var(--ease),visibility 0s .4s}
+.modal.open{visibility:visible;opacity:1;transition-delay:0s}
+.scrim{position:absolute;inset:0;background:color-mix(in srgb,var(--ink) 55%,transparent);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.sheet{position:relative;width:min(1080px,100%);max-height:100%;overflow:auto;background:var(--bg);border:1px solid var(--gold);display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);transform:translateY(24px) scale(.985);transition:transform .55s var(--ease)}
+.modal.open .sheet{transform:none}
+.x{position:absolute;top:12px;right:12px;z-index:3;width:42px;height:42px;display:grid;place-items:center;background:var(--bg);border:1px solid var(--line-strong);border-radius:50%;transition:background .3s,color .3s}
+.x:hover{background:var(--ink);color:var(--on-ink)}
+.gal{background:var(--bg-2);display:flex;flex-direction:column;border-right:1px solid var(--line);min-width:0}
+.stage{position:relative;aspect-ratio:16/10;overflow:hidden}
+.stage svg{display:block;width:100%;height:100%;animation:fadein .5s both}
+.gal-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-top:1px solid var(--line)}
+.gal-bar p{font-size:.85rem;color:var(--muted);line-height:1.4;flex:1;min-width:0}
+.gal-nav{display:flex;align-items:center;gap:8px}
+.gal-nav button{width:38px;height:38px;border:1px solid var(--line-strong);border-radius:50%;display:grid;place-items:center;transition:background .3s,color .3s}
+.gal-nav button:hover{background:var(--ink);color:var(--on-ink)}
+.dots{display:flex;gap:6px;padding:0 6px}
+.dots i{width:6px;height:6px;border-radius:50%;background:var(--line-strong);transition:background .3s,transform .3s}
+.dots i.on{background:var(--gold-ink);transform:scale(1.4)}
+.m-body{padding:clamp(24px,3.4vw,44px);display:grid;gap:18px;align-content:start;min-width:0}
+.m-body h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,3.2vw,2.6rem);line-height:1.1;padding-right:40px}
+.m-body h4{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-ink);font-weight:500;margin-bottom:8px}
+.m-body ul.pl{display:grid;gap:7px}
+.m-body ul.pl li{position:relative;padding-left:20px;color:var(--muted);line-height:1.5}
+.m-body ul.pl li::before{content:"";position:absolute;left:0;top:.7em;width:9px;height:1px;background:var(--gold)}
+.m-seal{width:84px;height:84px}
+@media (max-width:860px){.sheet{grid-template-columns:1fr}.gal{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* chronologies */
+.tl{display:grid;gap:44px;margin-top:clamp(40px,6vw,64px)}
+.tl-item{display:grid;grid-template-columns:minmax(130px,190px) 24px minmax(0,1fr);column-gap:clamp(18px,3vw,36px)}
+.tl-date{font-family:var(--serif);font-size:1.15rem;line-height:1.35;text-align:right;padding-top:2px}
+.tl-date small{display:block;font-family:var(--sans);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-ink);margin-top:6px}
+.rail{position:relative;display:flex;justify-content:center}
+.rail::before{content:"";position:absolute;top:30px;bottom:-44px;width:1px;background:var(--line-strong)}
+.tl-item:last-child .rail::before{display:none}
+.dot{position:relative;z-index:1;width:26px;height:26px;border-radius:50%;background:var(--bg);border:1px solid var(--gold);display:grid;place-items:center;color:var(--gold-ink);margin-top:0}
+.dot .ic{width:13px;height:13px}
+.tl-body{border:1px solid var(--line);background:var(--card);padding:clamp(22px,3vw,34px);transition:border-color .5s var(--ease)}
+.tl-body:hover{border-color:var(--gold)}
+.tl-body h3{font-family:var(--serif);font-weight:400;font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.2}
+.tl-body .org{margin-top:4px;color:var(--gold-ink);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.tl-body ul{display:grid;gap:9px;margin-top:18px}
+.tl-body li{position:relative;padding-left:22px;color:var(--muted);line-height:1.55}
+.tl-body li::before{content:"";position:absolute;left:0;top:.72em;width:10px;height:1px;background:var(--gold)}
+.tl-body p{color:var(--muted);margin-top:10px}
+@media (max-width:700px){
+  .tl-item{grid-template-columns:26px minmax(0,1fr);column-gap:16px}
+  .tl-date{grid-column:2;grid-row:1;text-align:left;margin-bottom:10px}
+  .rail{grid-column:1;grid-row:1/span 2}
+  .tl-body{grid-column:2;grid-row:2}
+}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px;margin-top:clamp(40px,6vw,64px)}
+.svc{grid-column:span 2;position:relative;border:1px solid var(--line);background:var(--card);padding:clamp(24px,3vw,34px);overflow:hidden;transition:border-color .5s var(--ease),transform .5s var(--ease)}
+.svc:nth-child(n+4){grid-column:span 3}
+.svc::before{content:"";position:absolute;left:0;top:0;height:2px;width:100%;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.svc:hover{border-color:var(--gold);transform:translateY(-4px)}
+.svc:hover::before{transform:scaleX(1)}
+.svc .ic{width:30px;height:30px;color:var(--gold-ink);transition:transform .6s var(--ease)}
+.svc:hover .ic{transform:translateY(-3px) rotate(-6deg)}
+.svc h3{font-family:var(--serif);font-weight:400;font-size:1.4rem;line-height:1.25;margin:18px 0 10px}
+.svc p{color:var(--muted);font-size:.98rem;line-height:1.6}
+@media (max-width:900px){.svc,.svc:nth-child(n+4){grid-column:span 3}.svc:last-child{grid-column:span 6}}
+@media (max-width:600px){.svc,.svc:nth-child(n+4),.svc:last-child{grid-column:span 6}}
+
+/* langues */
+.langs{margin-top:clamp(56px,8vw,90px);padding-top:30px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;align-items:baseline;gap:14px clamp(28px,5vw,64px)}
+.langs h3{font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-ink);font-weight:500;font-family:var(--sans)}
+.langs dl{display:flex;flex-wrap:wrap;gap:10px clamp(24px,4vw,52px)}
+.langs dt{font-family:var(--serif);font-size:1.2rem;display:inline}
+.langs dd{display:inline;color:var(--muted);font-size:.92rem;margin-left:8px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(36px,7vw,100px);margin-top:clamp(40px,6vw,64px)}
+.coords{display:grid;gap:0;margin-top:30px}
+.coord{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.coord:first-child{border-top:1px solid var(--line)}
+.coord .ic{width:22px;height:22px;color:var(--gold-ink)}
+.coord div{flex:1;min-width:0}
+.coord small{display:block;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+.coord a,.coord span.v{display:inline-block;font-family:var(--serif);font-size:clamp(1.05rem,2vw,1.3rem);line-height:1.35;overflow-wrap:anywhere;user-select:text;background:linear-gradient(var(--gold),var(--gold)) 0 100%/0 1px no-repeat;transition:background-size .5s var(--ease),color .3s}
+.coord a:hover{background-size:100% 1px;color:var(--gold-ink)}
+.copy{width:38px;height:38px;border:1px solid var(--line-strong);border-radius:50%;display:grid;place-items:center;flex:none;transition:background .3s,color .3s,border-color .3s}
+.copy:hover{background:var(--ink);color:var(--on-ink)}
+.copy.ok{border-color:var(--gold);color:var(--gold-ink)}
+.quick{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+form{display:grid;gap:26px;border:1px solid var(--line);background:var(--card);padding:clamp(24px,4vw,48px)}
+.field{position:relative;display:grid;gap:6px}
+.field label{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.field input,.field textarea{width:100%;font:inherit;font-size:1.05rem;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line-strong);padding:8px 0 10px;border-radius:0;outline:none;resize:vertical;transition:border-color .4s}
+.field textarea{min-height:120px}
+.field::after{content:"";position:absolute;left:0;right:0;bottom:calc(var(--eh,0px));height:1px;background:var(--gold-ink);transform:scaleX(0);transform-origin:left;transition:transform .5s var(--ease)}
+.field:focus-within::after{transform:scaleX(1)}
+.field:focus-within label{color:var(--gold-ink)}
+.field.bad input,.field.bad textarea{border-bottom-color:var(--err)}
+.err{min-height:1.2em;font-size:.82rem;color:var(--err);line-height:1.3}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.result{display:grid;gap:14px;border-top:1px solid var(--line);padding-top:24px}
+.result p{color:var(--muted)}
+.result textarea{width:100%;min-height:150px;font:inherit;font-size:.95rem;background:var(--bg-2);color:var(--ink);border:1px solid var(--line);padding:14px;resize:vertical}
+.notice{font-size:.9rem;color:var(--err)}
+.btn.sm{--h:44px;padding:0 22px;font-size:.74rem}
+
+/* pied de page */
+footer{border-top:1px solid var(--line);background:var(--bg-2);padding-block:clamp(48px,7vw,80px) 32px}
+.foot{display:grid;grid-template-columns:minmax(0,1.3fr) repeat(2,minmax(0,.8fr));gap:clamp(28px,5vw,64px)}
+.foot .nm{font-family:var(--serif);font-size:2rem;line-height:1.1}
+.foot .nm i{color:var(--gold-ink)}
+.foot p.ph{margin-top:12px;color:var(--muted);max-width:34ch}
+.foot h4{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-ink);font-weight:500;margin-bottom:14px}
+.foot ul{display:grid;gap:8px}
+.foot li a{color:var(--muted);transition:color .3s}
+.foot li a:hover{color:var(--gold-ink)}
+.foot-b{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;margin-top:clamp(36px,5vw,56px);padding-top:22px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+@media (max-width:760px){.foot{grid-template-columns:1fr 1fr}.foot>div:first-child{grid-column:1/-1}}
+.top{position:fixed;right:clamp(14px,3vw,28px);bottom:calc(clamp(14px,3vw,28px) + env(safe-area-inset-bottom,0px));z-index:40;width:48px;height:48px;border-radius:50%;background:var(--bg);border:1px solid var(--gold);display:grid;place-items:center;opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .4s var(--ease),transform .4s var(--ease),visibility 0s .4s,background .3s,color .3s}
+.top.show{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.top:hover{background:var(--ink);color:var(--on-ink)}
+
+/* apparition au défilement */
+.rv{transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:var(--d,0ms)}
+.rv.pre{opacity:0;transform:translateY(24px)}
+.rule.rv.pre{transform:scaleX(.2)}
+.swap{opacity:.2;transition:opacity .12s}
+main{transition:opacity .3s}
+.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:var(--on-ink);padding:10px 16px;z-index:200;transition:top .3s}
+.skip:focus{top:calc(env(safe-area-inset-top,0px) + 10px)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important;transition-delay:0ms!important}
+}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v13c0 1.7 3.6 3 8 3s8-1.3 8-3v-13M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></symbol>
+  <symbol id="i-net" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="12" cy="18" r="2.4"/><path d="M8.4 6h7.2M7.2 8l3.6 7.8M16.8 8l-3.6 7.8"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5"/><rect x="13.5" y="3" width="7.5" height="7.5"/><rect x="3" y="13.5" width="7.5" height="7.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.5" cy="8.5" r="2.5"/><path d="M17.5 14c2.2 0 3.5 2 3.5 5"/></symbol>
+  <symbol id="i-case" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M9 7V4h6v3M3 13h18"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.2 2.7 3 6 3s6-1.8 6-3v-4.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 005 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+  <symbol id="i-in" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M8 10.5V16M8 7.8v.1M12 16v-5.5M12 13c0-1.5 1-2.5 2.5-2.5S17 11.5 17 13v3"/></symbol>
+  <symbol id="i-logo" viewBox="0 0 24 24"><path d="M12 3l9 9-9 9-9-9z"/><circle cx="12" cy="12" r="2.6"/></symbol>
+  <symbol id="i-flyer" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18"/><circle cx="12" cy="9" r="2.5"/><path d="M8 15h8M8 18h5"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="1"/><path d="M6 10.5h5M6 13.5h3M15 10.5h3v3h-3z"/></symbol>
+  <symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 10v4l12 5V5zM15 9.5a3.2 3.2 0 010 5M6 15l1.5 5h2.5L9 16.5"/></symbol>
+  <symbol id="i-layout" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16"/><path d="M3 9h18M9 9v11"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-l" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-r" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="1"/><path d="M5 15V5a1 1 0 011-1h10"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V5M6 11l6-6 6 6"/></symbol>
+</svg>
+
+<a class="skip" href="#main" data-i18n="skip">Aller au contenu</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="#home" aria-label="Malem Asmaa"><b>M<i>A</i></b><span>Malem Asmaa</span></a>
+    <nav aria-label="Navigation principale" data-i18n-attr="aria-label:nav_aria">
+      <ul class="links" id="links">
+        <li><a href="#home" data-s="home" style="--i:0" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="#about" data-s="about" style="--i:1" data-i18n="nav_about">À propos</a></li>
+        <li><a href="#skills" data-s="skills" style="--i:2" data-i18n="nav_skills">Compétences</a></li>
+        <li><a href="#projects" data-s="projects" style="--i:3" data-i18n="nav_projects">Projets</a></li>
+        <li><a href="#experience" data-s="experience" style="--i:4" data-i18n="nav_exp">Expérience</a></li>
+        <li><a href="#education" data-s="education" style="--i:5" data-i18n="nav_edu">Formation</a></li>
+        <li><a href="#services" data-s="services" style="--i:6" data-i18n="nav_services">Services</a></li>
+        <li><a href="#contact" data-s="contact" style="--i:7" data-i18n="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-r">
+      <div class="lang" role="group" aria-label="Langue / Language">
+        <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="links" data-i18n-attr="aria-label:menu"><i></i><i></i></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="home">
+  <div class="orbits" aria-hidden="true">
+    <svg class="o1" viewBox="0 0 200 200"><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="70" stroke-dasharray="2 5"/><circle cx="100" cy="2" r="2.4" fill="var(--gold)"/></svg>
+    <svg class="o2" viewBox="0 0 200 200"><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="60"/><circle cx="198" cy="100" r="2.4" fill="var(--gold)"/></svg>
+  </div>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="role" data-in style="--n:0" data-i18n="hero_role">Informaticienne | Génie informatique | Innovation</p>
+      <h1><span>Malem</span><span><em>Asmaa</em></span></h1>
+      <p class="tagline" data-in style="--n:5" data-i18n="hero_tag">Concevoir des solutions intelligentes. Transformer les idées en innovation.</p>
+      <div class="cta">
+        <a class="btn btn-solid" href="#projects" data-in style="--n:6"><span data-i18n="btn_projects">Découvrir mes projets</span><svg class="ic"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="#contact" id="cvBtn" data-in style="--n:7"><span data-i18n="btn_cv">Demander mon CV</span></a>
+      </div>
+      <div class="scroll-hint" data-in style="--n:9" aria-hidden="true"><i></i><span data-i18n="scroll">Défiler</span></div>
+    </div>
+    <div class="portrait">
+      <div class="float">
+        <div class="arch"><div class="mono" aria-hidden="true">M<i>A</i></div><small data-i18n="portrait_cap">Tiaret, Algérie</small></div>
+        <div class="seal-slot spin" data-seal="sealHero"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap"><div class="rule rv"></div></div>
+
+<section class="sec" id="about">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i18n="about_eyebrow">À propos</p>
+    <h2 class="title rv" data-i18n-html="about_title">Une informaticienne qui aime <em>optimiser</em>.</h2>
+    <div class="about">
+      <div class="about-text">
+        <p class="rv" data-i18n-html="about_p1"></p>
+        <p class="rv" style="--d:80ms" data-i18n-html="about_p2"></p>
+        <p class="rv" style="--d:160ms" data-i18n-html="about_p3"></p>
+      </div>
+      <dl class="facts rv" style="--d:120ms">
+        <div class="fact"><dt data-i18n="f1_k">Master 2</dt><dd data-i18n="f1_v">Génie informatique</dd></div>
+        <div class="fact"><dt data-i18n="f2_k">Licence</dt><dd data-i18n="f2_v">Ingénierie des Systèmes d'Information et des Logiciels</dd></div>
+        <div class="fact"><dt data-i18n="f3_k">Label</dt><dd data-i18n="f3_v">Projet innovant : FlowGen</dd></div>
+        <div class="fact"><dt data-i18n="f4_k">Basée à</dt><dd data-i18n="f4_v">Tiaret, Algérie</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="skills" style="background:var(--bg-2)">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i18n="skills_eyebrow">Compétences</p>
+    <h2 class="title rv" data-i18n-html="skills_title">Des outils de l'ingénieure, un œil de <em>designer</em>.</h2>
+    <div class="skills">
+      <article class="skill wide rv"><svg class="ic"><use href="#i-code"/></svg><h3 data-i18n="sk1_t">Compétences techniques</h3><ul data-list="sk1"></ul></article>
+      <article class="skill half rv" style="--d:80ms"><svg class="ic"><use href="#i-pen"/></svg><h3 data-i18n="sk2_t">Outils et création numérique</h3><ul data-list="sk2"></ul></article>
+      <article class="skill half rv" style="--d:160ms"><svg class="ic"><use href="#i-users"/></svg><h3 data-i18n="sk3_t">Compétences personnelles</h3><ul data-list="sk3"></ul></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="projects">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i18n="proj_eyebrow">Projets</p>
+    <h2 class="title rv" data-i18n-html="proj_title">Trois projets, <em>une même exigence</em>.</h2>
+    <div class="projects">
+
+      <article class="proj feat rv">
+        <div class="thumb" data-open="flowgen"><div style="width:100%;height:100%" data-thumb="flowgen"></div></div>
+        <div class="seal-slot" data-seal="sealCard"></div>
+        <div class="proj-body">
+          <p class="kicker" data-i18n="fg_k">Projet de fin d'études · Master 2</p>
+          <h3>FlowGen</h3>
+          <p class="sub" data-i18n="fg_sub">Optimisation de la planification de la production dans un atelier d'usinage</p>
+          <p class="d" data-i18n="fg_d"></p>
+          <ul class="chips"><li>Python</li><li>Kivy</li><li>MySQL</li><li data-i18n="chip_ga">Algorithmes génétiques</li></ul>
+          <button class="link-more" type="button" data-open="flowgen"><span data-i18n="more">En savoir plus</span><svg class="ic"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+
+      <article class="proj rv" style="--d:60ms">
+        <div class="thumb" data-open="solosphere"><div style="width:100%;height:100%" data-thumb="solosphere"></div></div>
+        <div class="proj-body">
+          <p class="kicker" data-i18n="ss_k">Projet de fin d'études · Licence</p>
+          <h3>SoloSphère</h3>
+          <p class="sub" data-i18n="ss_sub">Site web de prestations de services en ligne</p>
+          <p class="d" data-i18n="ss_d"></p>
+          <ul class="chips"><li>PHP</li><li>MySQL</li><li>HTML</li><li>CSS</li></ul>
+          <button class="link-more" type="button" data-open="solosphere"><span data-i18n="more">En savoir plus</span><svg class="ic"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+
+      <article class="proj rv" style="--d:120ms">
+        <div class="thumb" data-open="design"><div style="width:100%;height:100%" data-thumb="design"></div></div>
+        <div class="proj-body">
+          <p class="kicker" data-i18n="dg_k">Activité freelance</p>
+          <h3 data-i18n="dg_t">Design graphique</h3>
+          <p class="sub" data-i18n="dg_sub">Logos, flyers, cartes de visite et supports de communication</p>
+          <p class="d" data-i18n="dg_d"></p>
+          <ul class="chips"><li>Canva</li><li>Word</li><li>PowerPoint</li></ul>
+          <button class="link-more" type="button" data-open="design"><span data-i18n="more">En savoir plus</span><svg class="ic"><use href="#i-arrow"/></svg></button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="experience" style="background:var(--bg-2)">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i18n="exp_eyebrow">Expérience professionnelle</p>
+    <h2 class="title rv" data-i18n-html="exp_title">Un premier pas <em>en entreprise</em>.</h2>
+    <div class="tl">
+      <div class="tl-item rv">
+        <div class="tl-date"><span data-i18n="exp_date">Déc. 2025 – Avr. 2026</span><small data-i18n="exp_len">Stage</small></div>
+        <div class="rail"><span class="dot"><svg class="ic"><use href="#i-case"/></svg></span></div>
+        <div class="tl-body">
+          <h3 data-i18n="exp_t">Stage en informatique et gestion des prestations</h3>
+          <p class="org">CASNOS · Tiaret</p>
+          <ul data-list="exp_list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="education">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i18n="edu_eyebrow">Formation et certifications</p>
+    <h2 class="title rv" data-i18n-html="edu_title">Un parcours <em>construit</em> à Tiaret.</h2>
+    <div class="tl">
+      <div class="tl-item rv">
+        <div class="tl-date"><span data-i18n="ed1_date">Sept. 2024 – Juin 2026</span><small>Master 2</small></div>
+        <div class="rail"><span class="dot"><svg class="ic"><use href="#i-cap"/></svg></span></div>
+        <div class="tl-body"><h3 data-i18n="ed1_t">Master en Informatique, Génie informatique</h3><p class="org" style="margin-top:4px;color:var(--gold-ink);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500" data-i18n="univ">Université Ibn Khaldoun de Tiaret</p></div>
+      </div>
+      <div class="tl-item rv" style="--d:80ms">
+        <div class="tl-date"><span data-i18n="ed2_date">Sept. 2021 – Juin 2024</span><small data-i18n="lic">Licence</small></div>
+        <div class="rail"><span class="dot"><svg class="ic"><use href="#i-cap"/></svg></span></div>
+        <div class="tl-body"><h3 data-i18n="ed2_t">Licence en Informatique, Ingénierie des Systèmes d'Information et des Logiciels</h3><p class="org" style="margin-top:4px;color:var(--gold-ink);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500" data-i18n="univ">Université Ibn Khaldoun de Tiaret</p></div>
+      </div>
+      <div class="tl-item rv" style="--d:160ms">
+        <div class="tl-date"><span data-i18n="ed3_k">Certifications</span><small data-i18n="ed3_s">Entrepreneuriat</small></div>
+        <div class="rail"><span class="dot"><svg class="ic"><use href="#i-star"/></svg></span></div>
+        <div class="tl-body"><h3 data-i18n="ed3_t">Formations en startup et entrepreneuriat</h3><p data-i18n="ed3_d"></p></div>
+      </div>
+    </div>
+
+    <div class="langs rv">
+      <h3 data-i18n="lang_t">Langues</h3>
+      <dl>
+        <div><dt data-i18n="l1">Arabe</dt><dd data-i18n="l1d">langue maternelle</dd></div>
+        <div><dt data-i18n="l2">Français</dt><dd data-i18n="l2d">bon niveau à l'écrit et à l'oral</dd></div>
+        <div><dt data-i18n="l3">Anglais</dt><dd data-i18n="l3d">débutant, en cours d'amélioration</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" style="background:var(--bg-2)">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i18n="svc_eyebrow">Services freelance</p>
+    <h2 class="title rv" data-i18n-html="svc_title">Des supports qui <em>vous ressemblent</em>.</h2>
+    <div class="services">
+      <article class="svc rv"><svg class="ic"><use href="#i-logo"/></svg><h3 data-i18n="s1_t"></h3><p data-i18n="s1_d"></p></article>
+      <article class="svc rv" style="--d:70ms"><svg class="ic"><use href="#i-flyer"/></svg><h3 data-i18n="s2_t"></h3><p data-i18n="s2_d"></p></article>
+      <article class="svc rv" style="--d:140ms"><svg class="ic"><use href="#i-card"/></svg><h3 data-i18n="s3_t"></h3><p data-i18n="s3_d"></p></article>
+      <article class="svc rv"><svg class="ic"><use href="#i-mega"/></svg><h3 data-i18n="s4_t"></h3><p data-i18n="s4_d"></p></article>
+      <article class="svc rv" style="--d:70ms"><svg class="ic"><use href="#i-layout"/></svg><h3 data-i18n="s5_t"></h3><p data-i18n="s5_d"></p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="contact">
+  <div class="wrap">
+    <p class="eyebrow rv" data-i18n="ct_eyebrow">Contact</p>
+    <h2 class="title rv" data-i18n-html="ct_title">Parlons de votre <em>projet</em>.</h2>
+    <div class="contact">
+      <div class="rv">
+        <p class="lead" data-i18n="ct_lead"></p>
+        <div class="coords">
+          <div class="coord"><svg class="ic"><use href="#i-mail"/></svg><div><small data-i18n="ct_mail">E-mail</small><a href="mailto:malem.asmaa@gmail.com">malem.asmaa@gmail.com</a></div><button class="copy" type="button" data-copy="malem.asmaa@gmail.com" data-i18n-attr="aria-label:copy"><svg class="ic"><use href="#i-copy"/></svg></button></div>
+          <div class="coord"><svg class="ic"><use href="#i-phone"/></svg><div><small data-i18n="ct_tel">Téléphone</small><a href="tel:+213560260896">+213 560 260 896</a></div><button class="copy" type="button" data-copy="+213 560 260 896" data-i18n-attr="aria-label:copy"><svg class="ic"><use href="#i-copy"/></svg></button></div>
+          <div class="coord"><svg class="ic"><use href="#i-in"/></svg><div><small>LinkedIn</small><a href="https://bit.ly/MAsmaa" target="_blank" rel="noopener">bit.ly/MAsmaa</a></div><button class="copy" type="button" data-copy="https://bit.ly/MAsmaa" data-i18n-attr="aria-label:copy"><svg class="ic"><use href="#i-copy"/></svg></button></div>
+          <div class="coord"><svg class="ic"><use href="#i-pin"/></svg><div><small data-i18n="ct_loc">Localisation</small><span class="v" data-i18n="ct_city">Tiaret, Algérie</span></div></div>
+        </div>
+        <div class="quick">
+          <a class="btn btn-solid sm" href="mailto:malem.asmaa@gmail.com"><span data-i18n="btn_mail">Envoyer un e-mail</span></a>
+          <a class="btn btn-line sm" href="https://bit.ly/MAsmaa" target="_blank" rel="noopener"><span>LinkedIn</span></a>
+          <a class="btn btn-line sm" href="tel:+213560260896"><span data-i18n="btn_call">Appeler</span></a>
+        </div>
+      </div>
+
+      <form id="cform" class="rv" style="--d:100ms" novalidate>
+        <div class="field" id="f-name"><label for="name" data-i18n="fm_name">Nom</label><input id="name" name="name" type="text" autocomplete="name" aria-describedby="e-name"><p class="err" id="e-name" aria-live="polite"></p></div>
+        <div class="field" id="f-email"><label for="email" data-i18n="fm_email">Adresse e-mail</label><input id="email" name="email" type="email" autocomplete="email" aria-describedby="e-email"><p class="err" id="e-email" aria-live="polite"></p></div>
+        <div class="field" id="f-subject"><label for="subject" data-i18n="fm_subject">Sujet</label><input id="subject" name="subject" type="text" aria-describedby="e-subject"><p class="err" id="e-subject" aria-live="polite"></p></div>
+        <div class="field" id="f-msg"><label for="msg" data-i18n="fm_msg">Message</label><textarea id="msg" name="msg" rows="5" aria-describedby="e-msg"></textarea><p class="err" id="e-msg" aria-live="polite"></p></div>
+        <div class="hp" aria-hidden="true"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div><button class="btn btn-solid" type="submit"><span data-i18n="fm_send">Préparer mon message</span><svg class="ic"><use href="#i-arrow"/></svg></button></div>
+        <p class="notice" id="notice" role="alert" hidden></p>
+        <div class="result" id="result" hidden>
+          <p data-i18n="fm_ready"></p>
+          <textarea id="composed" readonly aria-label="Message"></textarea>
+          <div class="quick" style="margin-top:0">
+            <button class="btn btn-solid sm" type="button" id="copyMsg"><span data-i18n="fm_copy">Copier le message</span></button>
+            <a class="btn btn-line sm" id="mailMsg" href="mailto:malem.asmaa@gmail.com"><span data-i18n="fm_open">Ouvrir ma messagerie</span></a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <p class="nm">Malem <i>Asmaa</i></p>
+        <p class="ph" data-i18n="ft_phrase">Informaticienne, Génie informatique. Concevoir des solutions intelligentes.</p>
+        <div class="lang" role="group" aria-label="Langue / Language" style="display:inline-flex;margin-top:20px">
+          <button type="button" data-lang="fr" aria-pressed="true">FR</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="ft_nav">Navigation</h4>
+        <ul>
+          <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+          <li><a href="#skills" data-i18n="nav_skills">Compétences</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Projets</a></li>
+          <li><a href="#experience" data-i18n="nav_exp">Expérience</a></li>
+          <li><a href="#education" data-i18n="nav_edu">Formation</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:malem.asmaa@gmail.com">malem.asmaa@gmail.com</a></li>
+          <li><a href="tel:+213560260896">+213 560 260 896</a></li>
+          <li><a href="https://bit.ly/MAsmaa" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li data-i18n="ct_city">Tiaret, Algérie</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-b"><span>© <span id="year">2026</span> Malem Asmaa. <span data-i18n="ft_rights">Tous droits réservés.</span></span></div>
+  </div>
+</footer>
+
+<button class="top" id="top" type="button" data-i18n-attr="aria-label:top"><svg class="ic"><use href="#i-up"/></svg></button>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="scrim" data-close></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="m-title" id="sheet">
+    <button class="x" type="button" data-close id="mclose" data-i18n-attr="aria-label:close"><svg class="ic"><use href="#i-x"/></svg></button>
+    <div class="gal">
+      <div class="stage" id="stage"></div>
+      <div class="gal-bar">
+        <p id="cap"></p>
+        <div class="gal-nav">
+          <button type="button" id="gprev" data-i18n-attr="aria-label:prev"><svg class="ic"><use href="#i-l"/></svg></button>
+          <div class="dots" id="dots" aria-hidden="true"></div>
+          <button type="button" id="gnext" data-i18n-attr="aria-label:next"><svg class="ic"><use href="#i-r"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="m-body" id="mbody"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- Contenu bilingue ---------- */
+var I18N = {
+fr:{
+ skip:"Aller au contenu", nav_aria:"Navigation principale", menu:"Ouvrir le menu", top:"Revenir en haut", close:"Fermer", prev:"Image précédente", next:"Image suivante", copy:"Copier",
+ nav_home:"Accueil", nav_about:"À propos", nav_skills:"Compétences", nav_projects:"Projets", nav_exp:"Expérience", nav_edu:"Formation", nav_services:"Services", nav_contact:"Contact",
+ meta_title:"Malem Asmaa | Informaticienne, Génie informatique",
+ meta_desc:"Portfolio de Malem Asmaa, informaticienne diplômée d'un Master 2 en Génie informatique à Tiaret. FlowGen, projet innovant d'optimisation de la planification, développement logiciel et design graphique.",
+ hero_role:"Informaticienne | Génie informatique | Innovation",
+ hero_tag:"Concevoir des solutions intelligentes. Transformer les idées en innovation.",
+ btn_projects:"Découvrir mes projets", btn_cv:"Demander mon CV", scroll:"Défiler", portrait_cap:"Tiaret, Algérie",
+ seal_text:"PROJET INNOVANT · FLOWGEN · ", seal_aria:"Label Projet innovant",
+ about_eyebrow:"À propos",
+ about_title:"Une informaticienne qui aime <em>optimiser</em>.",
+ about_p1:"Diplômée d'un <mark>Master 2 en Génie informatique</mark> et d'une <mark>Licence en Ingénierie des Systèmes d'Information et des Logiciels</mark> de l'Université Ibn Khaldoun de Tiaret, je conçois des solutions numériques utiles et soignées.",
+ about_p2:"Mon projet de fin d'études, <mark>FlowGen</mark>, a obtenu le label <mark>Projet innovant</mark>. C'est une application de bureau qui optimise la planification de la production dans un atelier d'usinage grâce aux algorithmes génétiques.",
+ about_p3:"Le développement informatique, l'optimisation et la conception de solutions numériques sont au cœur de mon travail. Je m'appuie sur la créativité, l'organisation et la capacité d'adaptation, avec un esprit entrepreneurial que je cultive aussi en freelance.",
+ f1_k:"Master 2", f1_v:"Génie informatique", f2_k:"Licence", f2_v:"Ingénierie des Systèmes d'Information et des Logiciels", f3_k:"Label", f3_v:"Projet innovant : FlowGen", f4_k:"Basée à", f4_v:"Tiaret, Algérie",
+ skills_eyebrow:"Compétences", skills_title:"Les outils de l'ingénieure, un œil de <em>designer</em>.",
+ sk1_t:"Compétences techniques", sk2_t:"Outils et création numérique", sk3_t:"Compétences personnelles",
+ sk1:["Développement informatique et conception de solutions logicielles","Développement web : HTML, CSS et PHP selon les projets","Bases de données : MySQL","Python et Kivy","Recherche opérationnelle et modélisation mathématique","Algorithmes génétiques et optimisation de la planification"],
+ sk2:["Word, Excel et PowerPoint","Canva","Création de logos, flyers et supports de communication"],
+ sk3:["Organisation et gestion des priorités","Travail en équipe et autonomie","Analyse des besoins","Capacité d'adaptation"],
+ proj_eyebrow:"Projets", proj_title:"Trois projets, <em>une même exigence</em>.", more:"En savoir plus", chip_ga:"Algorithmes génétiques",
+ fg_k:"Projet de fin d'études · Master 2", fg_sub:"Optimisation de la planification de la production dans un atelier d'usinage",
+ fg_d:"Une application de bureau qui cherche, par algorithme génétique, comment répartir les opérations sur les machines pour produire plus vite.",
+ ss_k:"Projet de fin d'études · Licence", ss_sub:"Site web de prestations de services en ligne",
+ ss_d:"Une plateforme web développée en PHP et MySQL pour présenter et gérer des prestations de services en ligne.",
+ dg_k:"Activité freelance", dg_t:"Design graphique", dg_sub:"Logos, flyers, cartes de visite et supports de communication",
+ dg_d:"Une sélection de créations pour des activités freelance, conçues avec Canva et les outils bureautiques.",
+ m_ctx:"Contexte", m_obj:"Objectifs", m_feat:"Fonctionnalités", m_tech:"Technologies", m_label:"Label Projet innovant",
+ fg_ctx:"Dans un atelier d'usinage, chaque pièce passe par plusieurs opérations et chaque opération peut s'exécuter sur plusieurs machines. Construire à la main un planning qui réduit la durée totale est long et peu fiable. FlowGen traite ce problème d'ordonnancement flexible (FJSP) de façon automatique.",
+ fg_obj:["Optimiser la planification de la production d'un atelier d'usinage","Concevoir et développer une application de bureau","Appliquer une approche fondée sur les algorithmes génétiques au problème FJSP"],
+ fg_feat:["Gestion des machines","Gestion des pièces","Planification de la production optimisée par algorithme génétique"],
+ fg_tech:["Python","Kivy","MySQL","Algorithmes génétiques","FJSP"],
+ fg_c1:"Illustration d'un planning d'atelier : chaque ligne est une machine, chaque couleur une pièce.",
+ fg_c2:"Illustration de la convergence : le meilleur individu s'améliore de génération en génération.",
+ fg_c3:"Architecture : interface Kivy, moteur d'optimisation Python, base de données MySQL.",
+ ss_ctx:"Projet de fin d'études de la Licence : concevoir et développer un site web de prestations de services en ligne.",
+ ss_obj:["Concevoir un site web de prestations de services en ligne","Structurer les données dans une base MySQL","Offrir une navigation claire aux visiteurs"],
+ ss_feat:["Présentation des prestations de services","Pages dynamiques développées en PHP","Données stockées et gérées dans MySQL"],
+ ss_tech:["HTML","CSS","PHP","MySQL"],
+ ss_c1:"Illustration d'une page de prestations de services.", ss_c2:"Architecture : navigateur, serveur PHP, base de données MySQL.",
+ ss_h:"Prestations de services", ss_s:"Rechercher une prestation", ss_card:"Prestation", ss_b1:"Navigateur", ss_b1s:"HTML · CSS", ss_b2:"Serveur", ss_b2s:"PHP", ss_b3:"Base de données", ss_b3s:"MySQL",
+ dg_ctx:"Créations réalisées dans le cadre de mon activité freelance.",
+ dg_obj:["Traduire une activité en signes simples et reconnaissables","Concevoir des supports lisibles, imprimés ou numériques","Garder une cohérence visuelle d'un support à l'autre"],
+ dg_feat:["Logos et identités visuelles","Flyers et affiches","Cartes de visite","Supports de communication numérique"],
+ dg_tech:["Canva","Word","PowerPoint"],
+ dg_c1:"Logos : trois pistes de signes.", dg_c2:"Flyers et affiches.", dg_c3:"Cartes de visite.", dg_c4:"Supports de communication numérique.",
+ g_machine:"Machine", g_time:"Temps", g_gen:"Générations", g_best:"Meilleur individu", g_mean:"Population moyenne",
+ exp_eyebrow:"Expérience professionnelle", exp_title:"Un premier pas <em>en entreprise</em>.",
+ exp_date:"Déc. 2025 – Avr. 2026", exp_len:"Stage", exp_t:"Stage en informatique et gestion des prestations",
+ exp_list:["Accueil et accompagnement des clients au guichet","Participation à la gestion des dossiers et à l'application des procédures internes","Découverte des processus administratifs et informatiques","Préparation à la collaboration avec l'ingénieur sur des missions techniques et administratives","Développement de compétences en service client et gestion administrative"],
+ edu_eyebrow:"Formation et certifications", edu_title:"Un parcours <em>construit</em> à Tiaret.",
+ univ:"Université Ibn Khaldoun de Tiaret", lic:"Licence",
+ ed1_date:"Sept. 2024 – Juin 2026", ed1_t:"Master en Informatique, Génie informatique",
+ ed2_date:"Sept. 2021 – Juin 2024", ed2_t:"Licence en Informatique, Ingénierie des Systèmes d'Information et des Logiciels",
+ ed3_k:"Certifications", ed3_s:"Entrepreneuriat", ed3_t:"Formations en startup et entrepreneuriat", ed3_d:"Deux formations qui complètent le parcours informatique par une culture de l'initiative et de la création de projet.",
+ lang_t:"Langues", l1:"Arabe", l1d:"langue maternelle", l2:"Français", l2d:"bon niveau à l'écrit et à l'oral", l3:"Anglais", l3d:"débutant, en cours d'amélioration",
+ svc_eyebrow:"Services freelance", svc_title:"Des supports qui <em>vous ressemblent</em>.",
+ s1_t:"Logos et identités visuelles", s1_d:"Un signe simple et juste, décliné en couleurs, formats et usages.",
+ s2_t:"Flyers et affiches", s2_d:"Des supports lisibles qui mettent l'information au premier plan.",
+ s3_t:"Cartes de visite", s3_d:"Un petit format soigné, à l'image de votre activité.",
+ s4_t:"Supports de communication numérique", s4_d:"Visuels pour les réseaux sociaux, présentations et documents.",
+ s5_t:"Projets informatiques et maquettes", s5_d:"Participation à des projets informatiques et conception de maquettes.",
+ ct_eyebrow:"Contact", ct_title:"Parlons de votre <em>projet</em>.",
+ ct_lead:"Une mission de design, un projet informatique, une opportunité professionnelle : écrivez-moi, je réponds avec plaisir.",
+ ct_mail:"E-mail", ct_tel:"Téléphone", ct_loc:"Localisation", ct_city:"Tiaret, Algérie", btn_mail:"Envoyer un e-mail", btn_call:"Appeler",
+ fm_name:"Nom", fm_email:"Adresse e-mail", fm_subject:"Sujet", fm_msg:"Message", fm_send:"Préparer mon message",
+ er_name:"Indiquez votre nom (2 caractères minimum).", er_email:"Saisissez une adresse e-mail valide, par exemple nom@domaine.com.", er_subject:"Indiquez le sujet de votre message.", er_msg:"Écrivez un message d'au moins 10 caractères.",
+ er_wait:"Veuillez patienter quelques secondes avant de renvoyer un message.",
+ fm_ready:"Votre message est prêt. Ce site ne peut pas l'envoyer lui-même : copiez-le ou ouvrez votre messagerie pour l'adresser à malem.asmaa@gmail.com.",
+ fm_copy:"Copier le message", fm_copied:"Message copié", fm_open:"Ouvrir ma messagerie", mail_from:"De", mail_addr:"E-mail", copy_fail:"Copie impossible ici : sélectionnez le texte et copiez-le.",
+ cv_subject:"Demande de CV",
+ ft_phrase:"Informaticienne, Génie informatique. Concevoir des solutions intelligentes.", ft_nav:"Navigation", ft_rights:"Tous droits réservés."
+},
+en:{
+ skip:"Skip to content", nav_aria:"Main navigation", menu:"Open menu", top:"Back to top", close:"Close", prev:"Previous image", next:"Next image", copy:"Copy",
+ nav_home:"Home", nav_about:"About", nav_skills:"Skills", nav_projects:"Projects", nav_exp:"Experience", nav_edu:"Education", nav_services:"Services", nav_contact:"Contact",
+ meta_title:"Malem Asmaa | Computer Scientist, Computer Engineering",
+ meta_desc:"Portfolio of Malem Asmaa, computer scientist with a Master's degree in Computer Engineering from Tiaret. FlowGen, an award-labelled innovative scheduling optimisation project, software development and graphic design.",
+ hero_role:"Computer Scientist | Computer Engineering | Innovation",
+ hero_tag:"Designing intelligent solutions. Turning ideas into innovation.",
+ btn_projects:"See my projects", btn_cv:"Request my CV", scroll:"Scroll", portrait_cap:"Tiaret, Algeria",
+ seal_text:"INNOVATIVE PROJECT · FLOWGEN · ", seal_aria:"Innovative Project label",
+ about_eyebrow:"About",
+ about_title:"A computer scientist who loves to <em>optimise</em>.",
+ about_p1:"With a <mark>Master's degree in Computer Engineering</mark> and a <mark>Bachelor's degree in Information Systems and Software Engineering</mark> from Ibn Khaldoun University of Tiaret, I design useful, carefully crafted digital solutions.",
+ about_p2:"My final-year project, <mark>FlowGen</mark>, earned the <mark>Innovative Project</mark> label. It is a desktop application that optimises production scheduling in a machining workshop using genetic algorithms.",
+ about_p3:"Software development, optimisation and the design of digital solutions are at the heart of my work. I rely on creativity, organisation and adaptability, with an entrepreneurial spirit I also put to work as a freelancer.",
+ f1_k:"Master's", f1_v:"Computer Engineering", f2_k:"Bachelor's", f2_v:"Information Systems and Software Engineering", f3_k:"Label", f3_v:"Innovative Project: FlowGen", f4_k:"Based in", f4_v:"Tiaret, Algeria",
+ skills_eyebrow:"Skills", skills_title:"An engineer's toolkit, a <em>designer's</em> eye.",
+ sk1_t:"Technical skills", sk2_t:"Tools and digital creation", sk3_t:"Personal skills",
+ sk1:["Software development and solution design","Web development: HTML, CSS and PHP depending on the project","Databases: MySQL","Python and Kivy","Operations research and mathematical modelling","Genetic algorithms and scheduling optimisation"],
+ sk2:["Word, Excel and PowerPoint","Canva","Logo, flyer and communication material design"],
+ sk3:["Organisation and priority management","Teamwork and autonomy","Requirements analysis","Adaptability"],
+ proj_eyebrow:"Projects", proj_title:"Three projects, <em>one standard</em>.", more:"Learn more", chip_ga:"Genetic algorithms",
+ fg_k:"Final-year project · Master's", fg_sub:"Optimising production scheduling in a machining workshop",
+ fg_d:"A desktop application that uses a genetic algorithm to decide how to spread operations across machines so production finishes sooner.",
+ ss_k:"Final-year project · Bachelor's", ss_sub:"Online service-provision website",
+ ss_d:"A web platform built with PHP and MySQL to present and manage online services.",
+ dg_k:"Freelance work", dg_t:"Graphic design", dg_sub:"Logos, flyers, business cards and communication materials",
+ dg_d:"A selection of creations made for freelance work, designed with Canva and office tools.",
+ m_ctx:"Context", m_obj:"Objectives", m_feat:"Features", m_tech:"Technologies", m_label:"Innovative Project label",
+ fg_ctx:"In a machining workshop, every part goes through several operations and each operation can run on several machines. Building by hand a schedule that shortens the total duration is slow and unreliable. FlowGen solves this flexible job shop scheduling problem (FJSP) automatically.",
+ fg_obj:["Optimise production scheduling for a machining workshop","Design and develop a desktop application","Apply a genetic-algorithm approach to the FJSP"],
+ fg_feat:["Machine management","Part management","Production scheduling optimised by a genetic algorithm"],
+ fg_tech:["Python","Kivy","MySQL","Genetic algorithms","FJSP"],
+ fg_c1:"Illustration of a workshop schedule: each row is a machine, each colour a part.",
+ fg_c2:"Illustration of convergence: the best individual improves generation after generation.",
+ fg_c3:"Architecture: Kivy interface, Python optimisation engine, MySQL database.",
+ ss_ctx:"Bachelor's final-year project: designing and building a website for online service provision.",
+ ss_obj:["Design a website for online service provision","Structure the data in a MySQL database","Offer clear navigation to visitors"],
+ ss_feat:["Presentation of the services offered","Dynamic pages built with PHP","Data stored and managed in MySQL"],
+ ss_tech:["HTML","CSS","PHP","MySQL"],
+ ss_c1:"Illustration of a services page.", ss_c2:"Architecture: browser, PHP server, MySQL database.",
+ ss_h:"Online services", ss_s:"Search for a service", ss_card:"Service", ss_b1:"Browser", ss_b1s:"HTML · CSS", ss_b2:"Server", ss_b2s:"PHP", ss_b3:"Database", ss_b3s:"MySQL",
+ dg_ctx:"Creations made as part of my freelance activity.",
+ dg_obj:["Turn an activity into simple, recognisable signs","Design readable materials, in print or digital","Keep a consistent look from one material to the next"],
+ dg_feat:["Logos and visual identities","Flyers and posters","Business cards","Digital communication materials"],
+ dg_tech:["Canva","Word","PowerPoint"],
+ dg_c1:"Logos: three directions for a mark.", dg_c2:"Flyers and posters.", dg_c3:"Business cards.", dg_c4:"Digital communication materials.",
+ g_machine:"Machine", g_time:"Time", g_gen:"Generations", g_best:"Best individual", g_mean:"Average population",
+ exp_eyebrow:"Professional experience", exp_title:"A first step <em>in the workplace</em>.",
+ exp_date:"Dec 2025 – Apr 2026", exp_len:"Internship", exp_t:"Internship in IT and benefits management",
+ exp_list:["Welcoming and assisting customers at the counter","Helping manage case files and apply internal procedures","Discovering administrative and IT processes","Preparing to work with the engineer on technical and administrative tasks","Building customer service and administrative management skills"],
+ edu_eyebrow:"Education and certifications", edu_title:"A path <em>built</em> in Tiaret.",
+ univ:"Ibn Khaldoun University of Tiaret", lic:"Bachelor's",
+ ed1_date:"Sept 2024 – June 2026", ed1_t:"Master's in Computer Science, Computer Engineering",
+ ed2_date:"Sept 2021 – June 2024", ed2_t:"Bachelor's in Computer Science, Information Systems and Software Engineering",
+ ed3_k:"Certifications", ed3_s:"Entrepreneurship", ed3_t:"Startup and entrepreneurship training", ed3_d:"Two training programmes that complement the computing background with a culture of initiative and project creation.",
+ lang_t:"Languages", l1:"Arabic", l1d:"native", l2:"French", l2d:"good written and spoken level", l3:"English", l3d:"beginner, improving",
+ svc_eyebrow:"Freelance services", svc_title:"Materials that <em>look like you</em>.",
+ s1_t:"Logos and visual identities", s1_d:"A simple, fitting mark, adapted to colours, formats and uses.",
+ s2_t:"Flyers and posters", s2_d:"Readable materials that put the information first.",
+ s3_t:"Business cards", s3_d:"A small, refined format that reflects your activity.",
+ s4_t:"Digital communication materials", s4_d:"Visuals for social media, presentations and documents.",
+ s5_t:"IT projects and mockups", s5_d:"Contribution to IT projects and interface mockup design.",
+ ct_eyebrow:"Contact", ct_title:"Let's talk about your <em>project</em>.",
+ ct_lead:"A design assignment, an IT project, a professional opportunity: write to me, I will be glad to reply.",
+ ct_mail:"Email", ct_tel:"Phone", ct_loc:"Location", ct_city:"Tiaret, Algeria", btn_mail:"Send an email", btn_call:"Call",
+ fm_name:"Name", fm_email:"Email address", fm_subject:"Subject", fm_msg:"Message", fm_send:"Prepare my message",
+ er_name:"Enter your name (at least 2 characters).", er_email:"Enter a valid email address, for example name@domain.com.", er_subject:"Enter the subject of your message.", er_msg:"Write a message of at least 10 characters.",
+ er_wait:"Please wait a few seconds before sending another message.",
+ fm_ready:"Your message is ready. This site cannot send it by itself: copy it or open your mail app to address it to malem.asmaa@gmail.com.",
+ fm_copy:"Copy message", fm_copied:"Message copied", fm_open:"Open my mail app", mail_from:"From", mail_addr:"Email", copy_fail:"Copy is not available here: select the text and copy it.",
+ cv_subject:"CV request",
+ ft_phrase:"Computer scientist, Computer Engineering. Designing intelligent solutions.", ft_nav:"Navigation", ft_rights:"All rights reserved."
+}};
+
+var lang="fr";
+try{var sv=localStorage.getItem("ma-lang"); if(sv==="fr"||sv==="en"){lang=sv}else if(/^en/i.test(navigator.language||"")){lang="en"}}catch(e){}
+function t(k){var d=I18N[lang]; return (d&&d[k]!==undefined)?d[k]:(I18N.fr[k]!==undefined?I18N.fr[k]:k)}
+function $(s,r){return (r||document).querySelector(s)}
+function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+/* ---------- Illustrations (SVG, couleurs via jetons) ---------- */
+var SV='font-family="Jost,Helvetica,Arial,sans-serif"';
+function svg(inner){return '<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true" '+SV+'>'+inner+'</svg>'}
+
+function gantt(){
+  var ops=[[1,0,0,4],[1,1,4,7],[1,2,7,11],[2,1,0,4],[2,2,4,7],[2,3,8,12],[3,2,0,4],[3,3,4,8],[3,0,9,13],[4,3,0,4],[4,0,4,9],[4,1,9,13],[5,2,11,15],[5,3,15,19],[6,1,13,17],[6,0,17,21]];
+  var x0=76,x1=612,u=(x1-x0)/22,top=48,rh=68,bh=46,o='';
+  function X(v){return x0+v*u}
+  for(var m=0;m<4;m++){
+    var y=top+m*rh;
+    o+='<line x1="'+x0+'" x2="'+x1+'" y1="'+(y+rh-11)+'" y2="'+(y+rh-11)+'" stroke="var(--line)"/>';
+    o+='<text x="22" y="'+(y+bh/2+5)+'" font-size="14" fill="var(--muted)" letter-spacing="1">M'+(m+1)+'</text>';
+  }
+  var ay=top+4*rh-2;
+  o+='<line x1="'+x0+'" x2="'+x1+'" y1="'+ay+'" y2="'+ay+'" stroke="var(--line-strong)"/>';
+  for(var k=0;k<=20;k+=4){o+='<line x1="'+X(k)+'" x2="'+X(k)+'" y1="'+ay+'" y2="'+(ay+6)+'" stroke="var(--line-strong)"/><text x="'+X(k)+'" y="'+(ay+22)+'" font-size="12" fill="var(--muted)" text-anchor="middle">'+k+'</text>'}
+  o+='<text x="'+x1+'" y="'+(ay+42)+'" font-size="12" fill="var(--muted)" text-anchor="end" letter-spacing="2">'+esc(t("g_time").toUpperCase())+'</text>';
+  var st=[['var(--bar-a)','var(--bar-a-fg)','none'],['var(--bar-b)','var(--bar-b-fg)','none'],['none','var(--ink)','var(--gold-ink)']];
+  ops.forEach(function(p){
+    var s=st[p[0]%3],y=top+p[1]*rh,w=(p[3]-p[2])*u-3;
+    o+='<rect x="'+(X(p[2])+1.5)+'" y="'+y+'" width="'+w+'" height="'+bh+'" rx="2" fill="'+s[0]+'" stroke="'+(s[2]==='none'?'none':s[2])+'" stroke-width="1.4"/>';
+    o+='<text x="'+(X(p[2])+1.5+w/2)+'" y="'+(y+bh/2+5)+'" font-size="14" font-weight="500" fill="'+s[1]+'" text-anchor="middle">P'+p[0]+'</text>';
+  });
+  o+='<line x1="'+X(21)+'" x2="'+X(21)+'" y1="'+(top-16)+'" y2="'+ay+'" stroke="var(--gold-ink)" stroke-dasharray="4 4"/><text x="'+X(21)+'" y="'+(top-22)+'" font-size="12" fill="var(--gold-ink)" text-anchor="middle" letter-spacing="1">Cmax</text>';
+  return svg(o);
+}
+function ga(){
+  var x0=72,x1=608,y0=40,y1=318,o='';
+  for(var i=0;i<=4;i++){var gy=y0+i*(y1-y0)/4;o+='<line x1="'+x0+'" x2="'+x1+'" y1="'+gy+'" y2="'+gy+'" stroke="var(--line)"/>'}
+  o+='<line x1="'+x0+'" x2="'+x0+'" y1="'+y0+'" y2="'+y1+'" stroke="var(--line-strong)"/><line x1="'+x0+'" x2="'+x1+'" y1="'+y1+'" y2="'+y1+'" stroke="var(--line-strong)"/>';
+  function Y(c){return y0+8+c*(y1-y0-30)}
+  var best=[],mean=[],g;
+  for(g=0;g<=100;g+=2){
+    var px=x0+g/100*(x1-x0);
+    best.push([px,Y(.32+.68*Math.exp(-g/17))]);
+    mean.push([px,Y(.52+.48*Math.exp(-g/26)+.035*Math.sin(g/2.6)*Math.exp(-g/55))]);
+  }
+  function path(a){return a.map(function(p,i){return (i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)}).join(' ')}
+  o+='<path d="'+path(mean)+'" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="5 4"/>';
+  o+='<path d="'+path(best)+'" fill="none" stroke="var(--gold-ink)" stroke-width="3"/>';
+  var e=best[best.length-1];
+  o+='<circle cx="'+e[0]+'" cy="'+e[1]+'" r="6" fill="var(--gold-ink)"/><circle cx="'+e[0]+'" cy="'+e[1]+'" r="12" fill="none" stroke="var(--gold)" stroke-opacity=".6"/>';
+  o+='<text x="'+x1+'" y="'+(y1+30)+'" font-size="12" fill="var(--muted)" text-anchor="end" letter-spacing="2">'+esc(t("g_gen").toUpperCase())+' →</text>';
+  o+='<text x="'+x0+'" y="26" font-size="12" fill="var(--muted)" letter-spacing="2">Cmax</text>';
+  o+='<g transform="translate(300,66)"><line x1="0" x2="26" y1="0" y2="0" stroke="var(--gold-ink)" stroke-width="3"/><text x="36" y="4" font-size="13" fill="var(--ink)">'+esc(t("g_best"))+'</text><line x1="0" x2="26" y1="24" y2="24" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="5 4"/><text x="36" y="28" font-size="13" fill="var(--ink)">'+esc(t("g_mean"))+'</text></g>';
+  return svg(o);
+}
+function box(x,y,w,h,a,b,fill){
+  return '<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+h+'" rx="4" fill="'+(fill||'var(--card)')+'" stroke="var(--gold)"/><text x="'+(x+w/2)+'" y="'+(y+h/2-4)+'" font-size="17" fill="var(--ink)" text-anchor="middle" font-family="Bodoni Moda,Georgia,serif">'+esc(a)+'</text><text x="'+(x+w/2)+'" y="'+(y+h/2+18)+'" font-size="12" fill="var(--muted)" text-anchor="middle" letter-spacing="1.5">'+esc(b)+'</text>';
+}
+function arrow(x1,x2,y){return '<line x1="'+x1+'" x2="'+(x2-6)+'" y1="'+y+'" y2="'+y+'" stroke="var(--gold-ink)" stroke-width="1.4"/><path d="M'+(x2-10)+' '+(y-5)+'L'+x2+' '+y+'L'+(x2-10)+' '+(y+5)+'" fill="none" stroke="var(--gold-ink)" stroke-width="1.4"/>'}
+function archFg(){
+  return svg(box(30,150,170,100,'Kivy','INTERFACE')+arrow(204,236,200)+box(240,150,170,100,'Python','AG · FJSP')+arrow(414,446,200)+box(450,150,160,100,'MySQL','MACHINES · PIÈCES'.replace('PIÈCES',lang==='en'?'PARTS':'PIÈCES'),'var(--bg)'));
+}
+function wire(){
+  var o='<rect x="56" y="36" width="528" height="330" rx="8" fill="var(--card)" stroke="var(--line-strong)"/><line x1="56" x2="584" y1="72" y2="72" stroke="var(--line-strong)"/>';
+  [78,94,110].forEach(function(cx){o+='<circle cx="'+cx+'" cy="54" r="4" fill="var(--line-strong)"/>'});
+  o+='<rect x="140" y="44" width="300" height="20" rx="10" fill="var(--bg-2)"/>';
+  o+='<text x="90" y="116" font-size="24" fill="var(--ink)" font-family="Bodoni Moda,Georgia,serif">'+esc(t("ss_h"))+'</text>';
+  o+='<rect x="90" y="132" width="300" height="30" rx="15" fill="none" stroke="var(--gold)"/><text x="108" y="152" font-size="13" fill="var(--muted)">'+esc(t("ss_s"))+'</text>';
+  for(var i=0;i<3;i++){var x=90+i*150;
+    o+='<rect x="'+x+'" y="186" width="136" height="156" rx="4" fill="var(--bg-2)"/><rect x="'+(x+10)+'" y="196" width="116" height="56" fill="var(--gold)" fill-opacity=".38"/><text x="'+(x+12)+'" y="278" font-size="14" fill="var(--ink)">'+esc(t("ss_card"))+' '+(i+1)+'</text><rect x="'+(x+12)+'" y="288" width="90" height="5" rx="2.5" fill="var(--line-strong)"/><rect x="'+(x+12)+'" y="300" width="64" height="5" rx="2.5" fill="var(--line-strong)"/><rect x="'+(x+12)+'" y="318" width="52" height="16" rx="8" fill="var(--bar-a)"/>';
+  }
+  return svg(o);
+}
+function archSs(){
+  return svg(box(30,150,170,100,t("ss_b1"),t("ss_b1s"))+arrow(204,236,200)+box(240,150,170,100,t("ss_b2"),t("ss_b2s"))+arrow(414,446,200)+box(450,150,160,100,t("ss_b3"),t("ss_b3s"),'var(--bg)'));
+}
+function logos(){
+  var o='<g stroke="var(--ink)" stroke-width="2.2" fill="none">';
+  o+='<circle cx="120" cy="200" r="54"/><circle cx="120" cy="200" r="16" fill="var(--gold)" stroke="none"/>';
+  o+='<path d="M320 142L378 200L320 258L262 200Z"/><path d="M320 172L348 200L320 228L292 200Z" stroke="var(--gold-ink)"/>';
+  o+='<path d="M474 232A46 46 0 0 1 566 232"/><path d="M488 232A32 32 0 0 1 552 232" stroke="var(--gold-ink)"/><path d="M502 232A18 18 0 0 1 538 232"/>';
+  o+='</g><line x1="40" x2="600" y1="318" y2="318" stroke="var(--line-strong)"/>';
+  return svg(o);
+}
+function flyer(){
+  var o='<g transform="rotate(-6 260 200)"><rect x="150" y="40" width="220" height="320" fill="var(--bg)" stroke="var(--line-strong)"/></g>';
+  o+='<rect x="230" y="34" width="230" height="332" fill="var(--bar-a)"/><circle cx="345" cy="128" r="56" fill="none" stroke="var(--gold)" stroke-width="2"/><circle cx="345" cy="128" r="22" fill="var(--gold)"/>';
+  o+='<rect x="262" y="226" width="166" height="10" rx="2" fill="var(--bar-a-fg)"/><rect x="262" y="248" width="120" height="6" rx="3" fill="var(--bar-a-fg)" fill-opacity=".55"/><rect x="262" y="264" width="136" height="6" rx="3" fill="var(--bar-a-fg)" fill-opacity=".55"/><rect x="262" y="318" width="70" height="20" fill="var(--gold)"/>';
+  return svg(o);
+}
+function cards(){
+  var o='<g transform="rotate(-5 250 150)"><rect x="90" y="70" width="290" height="166" fill="var(--card)" stroke="var(--line-strong)"/><circle cx="150" cy="130" r="22" fill="none" stroke="var(--gold-ink)" stroke-width="2"/><rect x="190" y="116" width="130" height="8" rx="2" fill="var(--ink)"/><rect x="190" y="134" width="90" height="5" rx="2.5" fill="var(--line-strong)"/><rect x="118" y="196" width="120" height="5" rx="2.5" fill="var(--line-strong)"/></g>';
+  o+='<g transform="rotate(4 400 270)"><rect x="260" y="180" width="290" height="166" fill="var(--bar-a)"/><path d="M405 222L433 250L405 278L377 250Z" fill="none" stroke="var(--gold)" stroke-width="2"/><rect x="340" y="300" width="130" height="6" rx="3" fill="var(--bar-a-fg)" fill-opacity=".6"/></g>';
+  return svg(o);
+}
+function social(){
+  var o='<rect x="70" y="70" width="260" height="260" fill="var(--bar-b)"/><circle cx="200" cy="170" r="62" fill="none" stroke="var(--bar-b-fg)" stroke-width="2"/><rect x="104" y="268" width="150" height="10" rx="2" fill="var(--bar-b-fg)"/><rect x="104" y="288" width="96" height="6" rx="3" fill="var(--bar-b-fg)" fill-opacity=".6"/>';
+  o+='<rect x="372" y="40" width="168" height="320" rx="14" fill="var(--card)" stroke="var(--line-strong)"/><rect x="392" y="62" width="128" height="150" fill="var(--gold)" fill-opacity=".4"/><path d="M392 212L456 140L520 212Z" fill="var(--gold-ink)" fill-opacity=".55"/><rect x="392" y="236" width="110" height="9" rx="2" fill="var(--ink)"/><rect x="392" y="256" width="80" height="6" rx="3" fill="var(--line-strong)"/><rect x="392" y="306" width="128" height="26" rx="13" fill="var(--bar-a)"/>';
+  return svg(o);
+}
+function thumbDesign(){
+  var o='<g transform="scale(.5)"><circle cx="150" cy="140" r="56" fill="none" stroke="var(--ink)" stroke-width="3"/><circle cx="150" cy="140" r="16" fill="var(--gold)"/><path d="M450 84L506 140L450 196L394 140Z" fill="none" stroke="var(--ink)" stroke-width="3"/></g>';
+  o+='<g transform="translate(320 0) scale(.5)"><rect x="60" y="50" width="200" height="280" fill="var(--bar-a)"/><circle cx="160" cy="140" r="46" fill="none" stroke="var(--gold)" stroke-width="3"/><rect x="90" y="250" width="140" height="10" fill="var(--bar-a-fg)"/></g>';
+  o+='<g transform="translate(0 200) scale(.5)"><rect x="80" y="70" width="290" height="166" fill="var(--card)" stroke="var(--line-strong)"/><circle cx="150" cy="130" r="22" fill="none" stroke="var(--gold-ink)" stroke-width="3"/><rect x="190" y="116" width="130" height="8" fill="var(--ink)"/></g>';
+  o+='<g transform="translate(320 200) scale(.5)"><rect x="60" y="60" width="260" height="260" fill="var(--bar-b)"/><circle cx="190" cy="170" r="62" fill="none" stroke="var(--bar-b-fg)" stroke-width="3"/></g>';
+  o+='<line x1="320" x2="320" y1="0" y2="400" stroke="var(--line)"/><line x1="0" x2="640" y1="200" y2="200" stroke="var(--line)"/>';
+  return svg(o);
+}
+function seal(id){
+  return '<svg class="seal" viewBox="0 0 120 120" role="img" aria-label="'+esc(t("seal_aria"))+'"><defs><path id="'+id+'" d="M16,60 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs><circle cx="60" cy="60" r="58" fill="var(--seal-bg)" stroke="var(--gold)"/><circle cx="60" cy="60" r="30" fill="none" stroke="var(--gold)" stroke-width=".8"/><text font-size="9.5" letter-spacing="1.6" fill="var(--seal-fg)" font-family="Jost,Arial,sans-serif" font-weight="500"><textPath href="#'+id+'" textLength="268" lengthAdjust="spacing">'+esc(t("seal_text"))+'</textPath></text><path d="M60 45l4.2 8.7 9.6 1.3-7 6.8 1.7 9.5L60 66.7l-8.5 4.6 1.7-9.5-7-6.8 9.6-1.3z" fill="var(--gold)"/></svg>';
+}
+
+var PROJ={
+  flowgen:{title:"FlowGen",pre:"fg",slides:[[gantt,"fg_c1"],[ga,"fg_c2"],[archFg,"fg_c3"]],label:true},
+  solosphere:{title:"SoloSphère",pre:"ss",slides:[[wire,"ss_c1"],[archSs,"ss_c2"]]},
+  design:{title:null,pre:"dg",slides:[[logos,"dg_c1"],[flyer,"dg_c2"],[cards,"dg_c3"],[social,"dg_c4"]]}
+};
+
+/* ---------- Application de la langue ---------- */
+function setList(el,arr){el.innerHTML=arr.map(function(s){return '<li>'+esc(s)+'</li>'}).join('')}
+function renderStatic(){
+  $$('[data-thumb]').forEach(function(el){
+    var k=el.getAttribute('data-thumb');
+    el.innerHTML = k==='design'?thumbDesign():PROJ[k].slides[0][0]();
+  });
+  $$('[data-seal]').forEach(function(el){el.innerHTML=seal(el.getAttribute('data-seal'))});
+}
+function applyLang(){
+  document.documentElement.lang=lang;
+  $$('[data-i18n]').forEach(function(el){el.textContent=t(el.getAttribute('data-i18n'))});
+  $$('[data-i18n-html]').forEach(function(el){el.innerHTML=t(el.getAttribute('data-i18n-html'))});
+  $$('[data-i18n-attr]').forEach(function(el){
+    el.getAttribute('data-i18n-attr').split(';').forEach(function(pair){var p=pair.split(':');el.setAttribute(p[0],t(p[1]))});
+  });
+  $$('[data-list]').forEach(function(el){setList(el,t(el.getAttribute('data-list')))});
+  $$('[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-lang')===lang?'true':'false')});
+  document.title=t('meta_title');
+  var md=$('meta[name="description"]'); if(md){md.setAttribute('content',t('meta_desc'))}
+  renderStatic();
+  if(current){renderModal()}
+  clearErrors();
+  if(composedReady){buildMessage()}
+}
+function setLang(l){
+  if(l===lang)return;
+  var m=$('#main'); m.classList.add('swap');
+  setTimeout(function(){
+    lang=l; try{localStorage.setItem('ma-lang',l)}catch(e){}
+    applyLang();
+    requestAnimationFrame(function(){m.classList.remove('swap')});
+  },120);
+}
+$$('[data-lang]').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-lang'))})});
+
+/* ---------- Navigation ---------- */
+var nav=$('#nav'), burger=$('#burger'), links=$('#links'), topBtn=$('#top');
+function closeMenu(){links.classList.remove('open');burger.setAttribute('aria-expanded','false')}
+burger.addEventListener('click',function(){
+  var o=!links.classList.contains('open');
+  links.classList.toggle('open',o);burger.setAttribute('aria-expanded',o?'true':'false');
+});
+$$('#links a').forEach(function(a){a.addEventListener('click',closeMenu)});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&links.classList.contains('open')){closeMenu();burger.focus()}});
+var secs=$$('section[id]'), ticking=false;
+function onScroll(){
+  var y=window.scrollY||0;
+  nav.classList.toggle('scrolled',y>12);
+  topBtn.classList.toggle('show',y>700);
+  var cur=secs[0].id, mark=window.innerHeight*0.38;
+  secs.forEach(function(s){if(s.getBoundingClientRect().top<=mark)cur=s.id});
+  $$('#links a').forEach(function(a){
+    if(a.getAttribute('data-s')===cur)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current');
+  });
+  ticking=false;
+}
+window.addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(onScroll)}},{passive:true});
+topBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+/* ---------- Apparition au défilement ---------- */
+var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!reduce&&'IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.remove('pre');io.unobserve(en.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.05});
+  $$('.rv').forEach(function(el){
+    if(el.getBoundingClientRect().top>window.innerHeight*0.92){el.classList.add('pre');io.observe(el)}
+  });
+}
+
+/* ---------- Fenêtre projet ---------- */
+var modal=$('#modal'), sheet=$('#sheet'), stage=$('#stage'), capEl=$('#cap'), dots=$('#dots'), mbody=$('#mbody');
+var current=null, idx=0, lastFocus=null;
+function renderModal(){
+  var P=PROJ[current], pre=P.pre;
+  var slide=P.slides[idx];
+  stage.innerHTML=slide[0]();
+  capEl.textContent=t(slide[1]);
+  dots.innerHTML=P.slides.map(function(_,i){return '<i class="'+(i===idx?'on':'')+'"></i>'}).join('');
+  var title=P.title||t('dg_t');
+  function ul(a){return '<ul class="pl">'+a.map(function(s){return '<li>'+esc(s)+'</li>'}).join('')+'</ul>'}
+  var h='';
+  if(P.label){h+='<div class="m-seal">'+seal('sealModal')+'</div>'}
+  h+='<p class="kicker">'+esc(t(pre+'_k'))+'</p><h3 id="m-title">'+esc(title)+'</h3>';
+  h+='<div><h4>'+esc(t('m_ctx'))+'</h4><p style="color:var(--muted)">'+esc(t(pre+'_ctx'))+'</p></div>';
+  h+='<div><h4>'+esc(t('m_obj'))+'</h4>'+ul(t(pre+'_obj'))+'</div>';
+  h+='<div><h4>'+esc(t('m_feat'))+'</h4>'+ul(t(pre+'_feat'))+'</div>';
+  h+='<div><h4>'+esc(t('m_tech'))+'</h4><ul class="chips">'+t(pre+'_tech').map(function(s){return '<li>'+esc(s)+'</li>'}).join('')+'</ul></div>';
+  mbody.innerHTML=h;
+  var one=P.slides.length<2;
+  $('#gprev').style.visibility=$('#gnext').style.visibility=one?'hidden':'visible';
+}
+function openModal(k){
+  current=k; idx=0; lastFocus=document.activeElement;
+  renderModal();
+  modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+  document.documentElement.style.overflow='hidden';
+  setTimeout(function(){$('#mclose').focus()},60);
+}
+function closeModal(){
+  modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+  document.documentElement.style.overflow='';
+  current=null;
+  if(lastFocus&&lastFocus.focus)lastFocus.focus();
+}
+function step(d){var n=PROJ[current].slides.length; idx=(idx+d+n)%n; renderModal()}
+$$('[data-open]').forEach(function(el){el.addEventListener('click',function(){openModal(el.getAttribute('data-open'))})});
+$$('[data-close]').forEach(function(el){el.addEventListener('click',closeModal)});
+$('#gprev').addEventListener('click',function(){step(-1)});
+$('#gnext').addEventListener('click',function(){step(1)});
+document.addEventListener('keydown',function(e){
+  if(!current)return;
+  if(e.key==='Escape'){closeModal()}
+  else if(e.key==='ArrowLeft'){step(-1)}
+  else if(e.key==='ArrowRight'){step(1)}
+  else if(e.key==='Tab'){
+    var f=$$('button,a[href]',sheet).filter(function(n){return n.offsetParent!==null&&n.style.visibility!=='hidden'});
+    if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}
+  }
+});
+
+/* ---------- Copie ---------- */
+function copyText(text,done,fail){
+  function fallback(){fail&&fail()}
+  try{
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(done,fallback)}
+    else fallback();
+  }catch(e){fallback()}
+}
+$$('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var txt=b.getAttribute('data-copy');
+    copyText(txt,function(){
+      b.classList.add('ok');b.innerHTML='<svg class="ic"><use href="#i-check"/></svg>';
+      setTimeout(function(){b.classList.remove('ok');b.innerHTML='<svg class="ic"><use href="#i-copy"/></svg>'},1600);
+    },function(){
+      var v=b.parentNode.querySelector('a,.v'); if(v){var r=document.createRange();r.selectNodeContents(v);var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
+    });
+  });
+});
+
+/* ---------- CV : pas de fichier à télécharger, on ouvre le formulaire ---------- */
+$('#cvBtn').addEventListener('click',function(){
+  var s=$('#subject'); if(!s.value){s.value=t('cv_subject')}
+});
+
+/* ---------- Formulaire ---------- */
+var form=$('#cform'), notice=$('#notice'), result=$('#result'), composed=$('#composed'), composedReady=false;
+var loadedAt=Date.now(), lastSend=0;
+function setErr(id,key){
+  var f=$('#f-'+id), e=$('#e-'+id);
+  e.textContent=key?t(key):''; f.classList.toggle('bad',!!key);
+  var inp=f.querySelector('input,textarea'); if(inp){inp.setAttribute('aria-invalid',key?'true':'false')}
+}
+function clearErrors(){
+  ['name','email','subject','msg'].forEach(function(k){var f=$('#f-'+k); if(f.classList.contains('bad')){validateField(k)}});
+  if(!notice.hidden){notice.textContent=t('er_wait')}
+}
+var VAL={
+  name:function(v){return v.trim().length>=2?'':'er_name'},
+  email:function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim())?'':'er_email'},
+  subject:function(v){return v.trim().length>=2?'':'er_subject'},
+  msg:function(v){return v.trim().length>=10?'':'er_msg'}
+};
+var IDS={name:'name',email:'email',subject:'subject',msg:'msg'};
+function validateField(k){var r=VAL[k]($('#'+IDS[k]).value);setErr(k,r);return !r}
+Object.keys(VAL).forEach(function(k){
+  var el=$('#'+IDS[k]);
+  el.addEventListener('blur',function(){if(el.value||$('#f-'+k).classList.contains('bad'))validateField(k)});
+  el.addEventListener('input',function(){if($('#f-'+k).classList.contains('bad'))validateField(k)});
+});
+function buildMessage(){
+  var txt=t('mail_from')+' : '+$('#name').value.trim()+'\n'+t('mail_addr')+' : '+$('#email').value.trim()+'\n\n'+$('#msg').value.trim();
+  composed.value=txt;
+  $('#mailMsg').setAttribute('href','mailto:malem.asmaa@gmail.com?subject='+encodeURIComponent($('#subject').value.trim())+'&body='+encodeURIComponent(txt));
+}
+form.addEventListener('submit',function(e){
+  e.preventDefault();
+  notice.hidden=true;
+  var ok=true; Object.keys(VAL).forEach(function(k){if(!validateField(k))ok=false});
+  if(!ok){var bad=$('.field.bad input,.field.bad textarea',form); if(bad)bad.focus(); return}
+  if($('#website').value){return}
+  var now=Date.now();
+  if(now-loadedAt<3000||now-lastSend<30000){notice.textContent=t('er_wait');notice.hidden=false;return}
+  lastSend=now; composedReady=true; buildMessage(); result.hidden=false;
+  result.scrollIntoView({behavior:reduce?'auto':'smooth',block:'nearest'});
+});
+$('#copyMsg').addEventListener('click',function(){
+  var b=$('#copyMsg span');
+  copyText(composed.value,function(){b.textContent=t('fm_copied');setTimeout(function(){b.textContent=t('fm_copy')},1800)},function(){composed.focus();composed.select();notice.textContent=t('copy_fail');notice.hidden=false});
+});
+
+/* ---------- Divers ---------- */
+$('#year').textContent=new Date().getFullYear();
+applyLang();
+onScroll();
+})();
+</script>
+
+</body></html>
